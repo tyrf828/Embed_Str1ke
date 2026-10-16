@@ -1,0 +1,14 @@
+[Move]
+Move =移動
+Run =長押しで走る
+[Attack]
+Attack =攻撃
+[Attach]
+Attach =吸着攻撃
+Scan =吸着物はスキャン可能
+[Lock]
+Lock =敵をロック
+[Regen]
+Regen =回復
+[Ult]
+Ult =必殺技を出す

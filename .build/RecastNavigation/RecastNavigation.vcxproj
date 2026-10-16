@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLTCG|x64">
+      <Configuration>ReleaseLTCG</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B704E848-A3FD-069B-CC2F-EC1FB887E6A6}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RecastNavigation</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTCG|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseLTCG|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>exe\x64\Debug\</OutDir>
+    <IntDir>obj\x64\Debug\</IntDir>
+    <TargetName>RecastNavigation</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>exe\x64\Release\</OutDir>
+    <IntDir>obj\x64\Release\</IntDir>
+    <TargetName>RecastNavigation</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTCG|x64'">
+    <OutDir>exe\x64\ReleaseLTCG\</OutDir>
+    <IntDir>obj\x64\ReleaseLTCG\</IntDir>
+    <TargetName>RecastNavigation</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4324;4201;5054;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>WIN64;WIN32;_WIN32;_LIB;_DEBUG;DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\opensource;..\..\opensource\recastnavigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/permissive- /Zo /Zc:char8_t- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4324;4201;5054;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>WIN64;WIN32;_WIN32;_WINDOWS;_LIB;NDEBUG;PROFILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\opensource;..\..\opensource\recastnavigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/permissive- /GT /Zo /Zc:char8_t- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTCG|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4324;4201;5054;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>WIN64;WIN32;_WIN32;_WINDOWS;_LIB;NDEBUG;LTCG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\opensource;..\..\opensource\recastnavigation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/permissive- /GT /Zc:char8_t- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\opensource\recastnavigation\DebugUtils\DebugDraw.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DebugUtils\DetourDebugDraw.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DebugUtils\DxLibDebugDraw.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DebugUtils\RecastDebugDraw.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DebugUtils\RecastDump.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Detour\DetourAlloc.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Detour\DetourAssert.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Detour\DetourCommon.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Detour\DetourMath.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Detour\DetourNavMesh.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Detour\DetourNavMeshBuilder.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Detour\DetourNavMeshQuery.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Detour\DetourNode.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Detour\DetourStatus.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DetourCrowd\DetourCrowd.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DetourCrowd\DetourLocalBoundary.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DetourCrowd\DetourObstacleAvoidance.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DetourCrowd\DetourPathCorridor.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DetourCrowd\DetourPathQueue.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DetourCrowd\DetourProximityGrid.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DetourTileCache\DetourTileCache.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\DetourTileCache\DetourTileCacheBuilder.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Recast\Recast.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Recast\RecastAlloc.h" />
+    <ClInclude Include="..\..\opensource\recastnavigation\Recast\RecastAssert.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\opensource\recastnavigation\DebugUtils\DebugDraw.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DebugUtils\DetourDebugDraw.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DebugUtils\RecastDebugDraw.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DebugUtils\RecastDump.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Detour\DetourAlloc.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Detour\DetourAssert.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Detour\DetourCommon.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Detour\DetourNavMesh.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Detour\DetourNavMeshBuilder.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Detour\DetourNavMeshQuery.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Detour\DetourNode.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DetourCrowd\DetourCrowd.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DetourCrowd\DetourLocalBoundary.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DetourCrowd\DetourObstacleAvoidance.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DetourCrowd\DetourPathCorridor.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DetourCrowd\DetourPathQueue.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DetourCrowd\DetourProximityGrid.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DetourTileCache\DetourTileCache.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\DetourTileCache\DetourTileCacheBuilder.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\Recast.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\RecastAlloc.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\RecastArea.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\RecastAssert.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\RecastContour.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\RecastFilter.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\RecastLayers.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\RecastMesh.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\RecastMeshDetail.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\RecastRasterization.cpp" />
+    <ClCompile Include="..\..\opensource\recastnavigation\Recast\RecastRegion.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLTCG|x64">
+      <Configuration>ReleaseLTCG</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7C10513F-E8C5-C934-71BA-C30BDD6EC038}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>EmbedStr1ke</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTCG|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseLTCG|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>exe\x64\Debug\</OutDir>
+    <IntDir>obj\x64\Debug\</IntDir>
+    <TargetName>EmbedStr1ke</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>exe\x64\Release\</OutDir>
+    <IntDir>obj\x64\Release\</IntDir>
+    <TargetName>EmbedStr1ke</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTCG|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>exe\x64\ReleaseLTCG\</OutDir>
+    <IntDir>obj\x64\ReleaseLTCG\</IntDir>
+    <TargetName>EmbedStr1ke</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompile.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4324;4201;5054;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>WIN64;WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_DISABLE_EXTENDED_ALIGNED_STORAGE;JPH_DEBUG_RENDERER=1;_SILENCE_CXX23_ALIGNED_STORAGE_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\dxlib;..\..\opensource\imgui;..\..\opensource;..\..\opensource\cereal\include;..\..\opensource\JoltPhysics;..\..\opensource\recastnavigation;..\..\src\Sample;..\..\opensource\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>Precompile.h</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/permissive- /Zo /Zc:char8_t- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN64;WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_DISABLE_EXTENDED_ALIGNED_STORAGE;JPH_DEBUG_RENDERER=1;_SILENCE_CXX23_ALIGNED_STORAGE_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\dxlib;..\..\opensource\imgui;..\..\opensource;..\..\opensource\cereal\include;..\..\opensource\JoltPhysics;..\..\opensource\recastnavigation;..\..\src\Sample;..\..\opensource\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalDependencies>Dbghelp.lib;onnxruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\dxlib;..\..\opensource\onnxruntime\lib\static\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompile.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4324;4201;5054;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>WIN64;WIN32;_WIN32;_WINDOWS;NDEBUG;PROFILE;_DISABLE_EXTENDED_ALIGNED_STORAGE;JPH_DEBUG_RENDERER=1;_SILENCE_CXX23_ALIGNED_STORAGE_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\dxlib;..\..\opensource\imgui;..\..\opensource;..\..\opensource\cereal\include;..\..\opensource\JoltPhysics;..\..\opensource\recastnavigation;..\..\src\Sample;..\..\opensource\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>Precompile.h</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/permissive- /GT /Zo /Zc:char8_t- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN64;WIN32;_WIN32;_WINDOWS;NDEBUG;PROFILE;_DISABLE_EXTENDED_ALIGNED_STORAGE;JPH_DEBUG_RENDERER=1;_SILENCE_CXX23_ALIGNED_STORAGE_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\dxlib;..\..\opensource\imgui;..\..\opensource;..\..\opensource\cereal\include;..\..\opensource\JoltPhysics;..\..\opensource\recastnavigation;..\..\src\Sample;..\..\opensource\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>onnxruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\dxlib;..\..\opensource\onnxruntime\lib\static\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTCG|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompile.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4324;4201;5054;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>WIN64;WIN32;_WIN32;_WINDOWS;NDEBUG;LTCG;_DISABLE_EXTENDED_ALIGNED_STORAGE;JPH_DEBUG_RENDERER=1;_SILENCE_CXX23_ALIGNED_STORAGE_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\dxlib;..\..\opensource\imgui;..\..\opensource;..\..\opensource\cereal\include;..\..\opensource\JoltPhysics;..\..\opensource\recastnavigation;..\..\src\Sample;..\..\opensource\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>Precompile.h</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/permissive- /GT /Zc:char8_t- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN64;WIN32;_WIN32;_WINDOWS;NDEBUG;LTCG;_DISABLE_EXTENDED_ALIGNED_STORAGE;JPH_DEBUG_RENDERER=1;_SILENCE_CXX23_ALIGNED_STORAGE_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\dxlib;..\..\opensource\imgui;..\..\opensource;..\..\opensource\cereal\include;..\..\opensource\JoltPhysics;..\..\opensource\recastnavigation;..\..\src\Sample;..\..\opensource\onnxruntime\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>onnxruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\dxlib;..\..\opensource\onnxruntime\lib\static\ReleaseLTCG;..\..\opensource\onnxruntime\lib\static\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\data\Shader\dxlib_ps.h" />
+    <ClInclude Include="..\..\data\Shader\dxlib_vs.h" />
+    <ClInclude Include="..\..\data\Shader\dxlib_vs_model.h" />
+    <ClInclude Include="..\..\dxlib\DxCompileConfig.h" />
+    <ClInclude Include="..\..\dxlib\DxDataType.h" />
+    <ClInclude Include="..\..\dxlib\DxDataTypeWin.h" />
+    <ClInclude Include="..\..\dxlib\DxFunctionWin.h" />
+    <ClInclude Include="..\..\dxlib\DxLib.h" />
+    <ClInclude Include="..\..\dxlib\Effekseer.Modules.h" />
+    <ClInclude Include="..\..\dxlib\Effekseer.SIMD.h" />
+    <ClInclude Include="..\..\dxlib\Effekseer.h" />
+    <ClInclude Include="..\..\dxlib\EffekseerForDXLib.h" />
+    <ClInclude Include="..\..\dxlib\EffekseerRendererDX11.h" />
+    <ClInclude Include="..\..\dxlib\EffekseerRendererDX9.h" />
+    <ClInclude Include="..\..\icon\resource.h" />
+    <ClInclude Include="..\..\src\Game\Component\AnimationControllerBase.h" />
+    <ClInclude Include="..\..\src\Game\Component\CircularBoundary.h" />
+    <ClInclude Include="..\..\src\Game\Component\ComponentCameraController.h" />
+    <ClInclude Include="..\..\src\Game\Component\ComponentHP.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\Animation\CutSceneBossAnimationController.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\Animation\CutScenePlayerAnimationController.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\CutScene.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\EnterBoss\CutSceneBossAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\EnterBoss\CutSceneBossJump.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\EnterBoss\CutSceneBossLook.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\EnterBoss\CutSceneFight.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\EnterBoss\CutScenePlayerWalkIn.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\Victory\CutSceneEarthQuake.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\Victory\CutSceneEscape.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\Victory\CutScenePlayerPickUp.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\Victory\CutSceneRunEscape.h" />
+    <ClInclude Include="..\..\src\Game\Component\CutScene\Victory\CutSceneStageFade.h" />
+    <ClInclude Include="..\..\src\Game\Component\Decal.h" />
+    <ClInclude Include="..\..\src\Game\Component\DialogueVoice.h" />
+    <ClInclude Include="..\..\src\Game\Component\DissolveEffect.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\ActionBase\ActionAttackBase.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\ActionBase\ActionFindPlayerBase.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\ActionBase\ActionThreatBase.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\AttackParam.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossAction.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossBlast.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossConfront.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossConfrontBackward.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossConfrontForward.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossConfrontLeftRight.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossConfrontStay.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossDamaged.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossDashAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossDeath.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossFallBack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossGrabAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossIdle.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossJump.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossKick.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossKnockback.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossReady.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\Action\BossWalk.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\BossAI.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\BossActionManager.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Boss\BossAnimationController.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyAction.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyDamaged.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyDeath.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyFindPlayer.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyIdle.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyKnockback.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyStandUp.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyStayby.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyThreat.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\CloseEnemy\CloseEnemyAnimationController.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\EnemyActionBase.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\EnemyMove.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyAction.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyDamaged.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyDeath.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyFindPlayer.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyIdle.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyKnockback.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyStayby.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyThreat.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\FarEnemy\FarEnemyAnimationController.h" />
+    <ClInclude Include="..\..\src\Game\Component\Enemy\Knockback.h" />
+    <ClInclude Include="..\..\src\Game\Component\ForceMoveBase.h" />
+    <ClInclude Include="..\..\src\Game\Component\LineTransition.h" />
+    <ClInclude Include="..\..\src\Game\Component\Navmesh.h" />
+    <ClInclude Include="..\..\src\Game\Component\OutLine.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\AnimationController.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\Attack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\Attack2.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\Attack3.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\AttackBase.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\CombineAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\Move.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\Regenerate.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\Stamina.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\UltimateAttack\UltimateAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\UltimateAttack\UltimateBase.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\UltimateAttack\UltimateDash.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\UltimateAttack\UltimateRangeAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\UltimateAttack\UltimateThunder.h" />
+    <ClInclude Include="..\..\src\Game\Component\Player\UltimateGauge.h" />
+    <ClInclude Include="..\..\src\Game\Component\ReciprocalVelocityObstacles.h" />
+    <ClInclude Include="..\..\src\Game\Component\Sound.h" />
+    <ClInclude Include="..\..\src\Game\Component\SphericalMaskTransition.h" />
+    <ClInclude Include="..\..\src\Game\Component\Tutorial\Tutorial.h" />
+    <ClInclude Include="..\..\src\Game\Component\Tutorial\TutorialAttachAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Tutorial\TutorialAttachExplain.h" />
+    <ClInclude Include="..\..\src\Game\Component\Tutorial\TutorialAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Tutorial\TutorialEnd.h" />
+    <ClInclude Include="..\..\src\Game\Component\Tutorial\TutorialLock.h" />
+    <ClInclude Include="..\..\src\Game\Component\Tutorial\TutorialMove.h" />
+    <ClInclude Include="..\..\src\Game\Component\Tutorial\TutorialRegen.h" />
+    <ClInclude Include="..\..\src\Game\Component\Tutorial\TutorialStart.h" />
+    <ClInclude Include="..\..\src\Game\Component\Tutorial\TutorialUltimate.h" />
+    <ClInclude Include="..\..\src\Game\Component\UI\AutoDrawText.h" />
+    <ClInclude Include="..\..\src\Game\Component\UI\BossHPUI.h" />
+    <ClInclude Include="..\..\src\Game\Component\Weapon\AttachAttack.h" />
+    <ClInclude Include="..\..\src\Game\Component\Weapon\AttachWeapon.h" />
+    <ClInclude Include="..\..\src\Game\Component\Weapon\AttachWeaponParts.h" />
+    <ClInclude Include="..\..\src\Game\Component\Weapon\AttachWeaponRemain.h" />
+    <ClInclude Include="..\..\src\Game\Component\Weapon\AttachWeaponStandby.h" />
+    <ClInclude Include="..\..\src\Game\Component\Weapon\ReactiveForce.h" />
+    <ClInclude Include="..\..\src\Game\Component\WeaponAttack.h" />
+    <ClInclude Include="..\..\src\Game\Object\Animation\AnimationBoss.h" />
+    <ClInclude Include="..\..\src\Game\Object\Animation\AnimationPlayer.h" />
+    <ClInclude Include="..\..\src\Game\Object\BlackScreen.h" />
+    <ClInclude Include="..\..\src\Game\Object\BossStage.h" />
+    <ClInclude Include="..\..\src\Game\Object\Bottle.h" />
+    <ClInclude Include="..\..\src\Game\Object\Bridge.h" />
+    <ClInclude Include="..\..\src\Game\Object\Crystal.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\BossBlastEffect.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\BossHitEffect.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\BossSmokeEffect.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\DamageText.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\EffectBase.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\EnemyHitEffect.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\FinishThunderEffect.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\FloorBreakEffect.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\HitEffect.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\InkSplash.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\Rose2D.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\ShootLaserEffect.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\SlashEffect.h" />
+    <ClInclude Include="..\..\src\Game\Object\Effect\UltimateAttackEffect.h" />
+    <ClInclude Include="..\..\src\Game\Object\Enemy\Boss\Boss.h" />
+    <ClInclude Include="..\..\src\Game\Object\Enemy\CloseEnemy\CloseEnemy.h" />
+    <ClInclude Include="..\..\src\Game\Object\Enemy\CloseEnemy\EnemySword.h" />
+    <ClInclude Include="..\..\src\Game\Object\Enemy\EnemyBase.h" />
+    <ClInclude Include="..\..\src\Game\Object\Enemy\EnemyLockPoint.h" />
+    <ClInclude Include="..\..\src\Game\Object\Enemy\FarEnemy\EnemyGun.h" />
+    <ClInclude Include="..\..\src\Game\Object\Enemy\FarEnemy\FarEnemy.h" />
+    <ClInclude Include="..\..\src\Game\Object\Enemy\FarEnemy\GunHitCheck.h" />
+    <ClInclude Include="..\..\src\Game\Object\Enemy\MentalMap.h" />
+    <ClInclude Include="..\..\src\Game\Object\FilterBloom.h" />
+    <ClInclude Include="..\..\src\Game\Object\FilterGodRay.h" />
+    <ClInclude Include="..\..\src\Game\Object\FilterInkWash.h" />
+    <ClInclude Include="..\..\src\Game\Object\FilterLensFlare.h" />
+    <ClInclude Include="..\..\src\Game\Object\FilterVolumetricFog.h" />
+    <ClInclude Include="..\..\src\Game\Object\Gbuffer.h" />
+    <ClInclude Include="..\..\src\Game\Object\LightDirectional.h" />
+    <ClInclude Include="..\..\src\Game\Object\LightEnvironment.h" />
+    <ClInclude Include="..\..\src\Game\Object\LightManager.h" />
+    <ClInclude Include="..\..\src\Game\Object\LightPoint.h" />
+    <ClInclude Include="..\..\src\Game\Object\Manager\EnemyActionManager.h" />
+    <ClInclude Include="..\..\src\Game\Object\Manager\EnemyMentalManager.h" />
+    <ClInclude Include="..\..\src\Game\Object\Manager\SceneGameManager.h" />
+    <ClInclude Include="..\..\src\Game\Object\Manager\SceneTitleManager.h" />
+    <ClInclude Include="..\..\src\Game\Object\Manager\SpawnManager.h" />
+    <ClInclude Include="..\..\src\Game\Object\Player\Camera.h" />
+    <ClInclude Include="..\..\src\Game\Object\Player\CameraAimPoint.h" />
+    <ClInclude Include="..\..\src\Game\Object\Player\GameUI.h" />
+    <ClInclude Include="..\..\src\Game\Object\Player\Player.h" />
+    <ClInclude Include="..\..\src\Game\Object\Player\UltimateAttackCollision.h" />
+    <ClInclude Include="..\..\src\Game\Object\RetryUI.h" />
+    <ClInclude Include="..\..\src\Game\Object\SSAO.h" />
+    <ClInclude Include="..\..\src\Game\Object\ScanWave.h" />
+    <ClInclude Include="..\..\src\Game\Object\Shadowmap.h" />
+    <ClInclude Include="..\..\src\Game\Object\SkyDome\BlueSkyDome.h" />
+    <ClInclude Include="..\..\src\Game\Object\SkyDome\BossSkyDome.h" />
+    <ClInclude Include="..\..\src\Game\Object\Spawner.h" />
+    <ClInclude Include="..\..\src\Game\Object\Stage.h" />
+    <ClInclude Include="..\..\src\Game\Object\StageTrigger.h" />
+    <ClInclude Include="..\..\src\Game\Object\Sun.h" />
+    <ClInclude Include="..\..\src\Game\Object\TestStage.h" />
+    <ClInclude Include="..\..\src\Game\Object\Tool\AddData.h" />
+    <ClInclude Include="..\..\src\Game\Object\Tool\MentalMapBuilder.h" />
+    <ClInclude Include="..\..\src\Game\Object\Tool\MentalPosBall.h" />
+    <ClInclude Include="..\..\src\Game\Object\Truck.h" />
+    <ClInclude Include="..\..\src\Game\Object\Weapon\AttachWeapon\AttachWeaponBase.h" />
+    <ClInclude Include="..\..\src\Game\Object\Weapon\AttachWeapon\Barrel.h" />
+    <ClInclude Include="..\..\src\Game\Object\Weapon\AttachWeapon\BarrelWet.h" />
+    <ClInclude Include="..\..\src\Game\Object\Weapon\AttachWeapon\Box.h" />
+    <ClInclude Include="..\..\src\Game\Object\Weapon\AttachWeapon\TrafficCone.h" />
+    <ClInclude Include="..\..\src\Game\Object\Weapon\Stick.h" />
+    <ClInclude Include="..\..\src\Game\Pause.h" />
+    <ClInclude Include="..\..\src\Game\Scene\SceneBoss.h" />
+    <ClInclude Include="..\..\src\Game\Scene\SceneCutScene.h" />
+    <ClInclude Include="..\..\src\Game\Scene\SceneGame.h" />
+    <ClInclude Include="..\..\src\Game\Scene\SceneMentalMap.h" />
+    <ClInclude Include="..\..\src\Game\Scene\SceneRetry.h" />
+    <ClInclude Include="..\..\src\Game\Scene\SceneTest.h" />
+    <ClInclude Include="..\..\src\Game\Scene\SceneTitle.h" />
+    <ClInclude Include="..\..\src\Game\Scene\SceneTutorial.h" />
+    <ClInclude Include="..\..\src\Game\Scene\SceneVictoryCutScene.h" />
+    <ClInclude Include="..\..\src\Precompile.h" />
+    <ClInclude Include="..\..\src\System\Cereal.h" />
+    <ClInclude Include="..\..\src\System\Component\Component.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentAttachModel.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentCamera.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentCollision.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentCollisionBox.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentCollisionCapsule.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentCollisionLine.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentCollisionModel.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentCollisionSphere.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentEffect.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentFilterFade.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentModel.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentObjectController.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentPhysics.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentSequencer.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentSpringArm.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentTargetTracking.h" />
+    <ClInclude Include="..\..\src\System\Component\ComponentTransform.h" />
+    <ClInclude Include="..\..\src\System\Debug\DebugCamera.h" />
+    <ClInclude Include="..\..\src\System\EaseCurve.h" />
+    <ClInclude Include="..\..\src\System\FileWatcher.h" />
+    <ClInclude Include="..\..\src\System\Geometry.h" />
+    <ClInclude Include="..\..\src\System\Graphics\Animation.h" />
+    <ClInclude Include="..\..\src\System\Graphics\ConstantBuffer.h" />
+    <ClInclude Include="..\..\src\System\Graphics\Frustum.h" />
+    <ClInclude Include="..\..\src\System\Graphics\Model.h" />
+    <ClInclude Include="..\..\src\System\Graphics\ModelCache.h" />
+    <ClInclude Include="..\..\src\System\Graphics\Render.h" />
+    <ClInclude Include="..\..\src\System\Graphics\ResourceModel.h" />
+    <ClInclude Include="..\..\src\System\Graphics\Shader.h" />
+    <ClInclude Include="..\..\src\System\Graphics\Texture.h" />
+    <ClInclude Include="..\..\src\System\GuiMenu.h" />
+    <ClInclude Include="..\..\src\System\ImGui.h" />
+    <ClInclude Include="..\..\src\System\Input\InputKey.h" />
+    <ClInclude Include="..\..\src\System\Input\InputMouse.h" />
+    <ClInclude Include="..\..\src\System\Input\InputPad.h" />
+    <ClInclude Include="..\..\src\System\JobScheduler.h" />
+    <ClInclude Include="..\..\src\System\Lib.h" />
+    <ClInclude Include="..\..\src\System\LightManager.h" />
+    <ClInclude Include="..\..\src\System\Object.h" />
+    <ClInclude Include="..\..\src\System\Physics\PhysicsCharacter.h" />
+    <ClInclude Include="..\..\src\System\Physics\PhysicsEngine.h" />
+    <ClInclude Include="..\..\src\System\Physics\PhysicsLayer.h" />
+    <ClInclude Include="..\..\src\System\Physics\RigidBody.h" />
+    <ClInclude Include="..\..\src\System\Physics\Shape.h" />
+    <ClInclude Include="..\..\src\System\Priority.h" />
+    <ClInclude Include="..\..\src\System\ProcTiming.h" />
+    <ClInclude Include="..\..\src\System\Scene.h" />
+    <ClInclude Include="..\..\src\System\Signals.h" />
+    <ClInclude Include="..\..\src\System\Status.h" />
+    <ClInclude Include="..\..\src\System\SystemMain.h" />
+    <ClInclude Include="..\..\src\System\TypeInfo.h" />
+    <ClInclude Include="..\..\src\System\Typedef.h" />
+    <ClInclude Include="..\..\src\System\Utils\HelperLib.h" />
+    <ClInclude Include="..\..\src\System\Utils\IniFileLib.h" />
+    <ClInclude Include="..\..\src\System\VectorMath.h" />
+    <ClInclude Include="..\..\src\WinMain.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Game\Component\AnimationControllerBase.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CircularBoundary.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\ComponentCameraController.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\ComponentHP.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\Animation\CutSceneBossAnimationController.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\Animation\CutScenePlayerAnimationController.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\CutScene.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\EnterBoss\CutSceneBossAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\EnterBoss\CutSceneBossJump.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\EnterBoss\CutSceneBossLook.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\EnterBoss\CutSceneFight.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\EnterBoss\CutScenePlayerWalkIn.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\Victory\CutSceneEarthQuake.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\Victory\CutSceneEscape.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\Victory\CutScenePlayerPickUp.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\Victory\CutSceneRunEscape.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\CutScene\Victory\CutSceneStageFade.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Decal.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\DialogueVoice.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\DissolveEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossAction.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossBlast.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossConfront.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossConfrontBackward.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossConfrontForward.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossConfrontLeftRight.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossConfrontStay.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossDamaged.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossDashAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossDeath.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossFallBack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossGrabAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossIdle.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossJump.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossKick.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossKnockback.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossReady.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\Action\BossWalk.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\BossAI.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\BossActionManager.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Boss\BossAnimationController.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyAction.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyDamaged.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyDeath.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyFindPlayer.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyIdle.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyKnockback.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyStandUp.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyStayby.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\Action\CloseEnemyThreat.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\CloseEnemy\CloseEnemyAnimationController.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\EnemyActionBase.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\EnemyMove.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyAction.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyDamaged.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyDeath.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyFindPlayer.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyIdle.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyKnockback.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyStayby.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\FarEnemy\Action\FarEnemyThreat.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\FarEnemy\FarEnemyAnimationController.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Enemy\Knockback.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\LineTransition.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Navmesh.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\OutLine.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\AnimationController.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\Attack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\Attack2.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\Attack3.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\AttackBase.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\CombineAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\Move.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\Regenerate.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\Stamina.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\UltimateAttack\UltimateAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\UltimateAttack\UltimateBase.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\UltimateAttack\UltimateDash.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\UltimateAttack\UltimateRangeAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\UltimateAttack\UltimateThunder.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Player\UltimateGauge.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\ReciprocalVelocityObstacles.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Sound.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\SphericalMaskTransition.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Tutorial\Tutorial.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Tutorial\TutorialAttachAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Tutorial\TutorialAttachExplain.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Tutorial\TutorialAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Tutorial\TutorialEnd.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Tutorial\TutorialLock.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Tutorial\TutorialMove.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Tutorial\TutorialRegen.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Tutorial\TutorialStart.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Tutorial\TutorialUltimate.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\UI\AutoDrawText.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\UI\BossHPUI.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Weapon\AttachAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Weapon\AttachWeapon.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Weapon\AttachWeaponParts.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Weapon\AttachWeaponRemain.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Weapon\AttachWeaponStandby.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\Weapon\ReactiveForce.cpp" />
+    <ClCompile Include="..\..\src\Game\Component\WeaponAttack.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Animation\AnimationBoss.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Animation\AnimationPlayer.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\BlackScreen.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\BossStage.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Bottle.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Bridge.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Crystal.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\BossBlastEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\BossHitEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\BossSmokeEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\DamageText.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\EffectBase.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\EnemyHitEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\FinishThunderEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\FloorBreakEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\HitEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\InkSplash.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\Rose2D.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\ShootLaserEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\SlashEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Effect\UltimateAttackEffect.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Enemy\Boss\Boss.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Enemy\CloseEnemy\CloseEnemy.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Enemy\CloseEnemy\EnemySword.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Enemy\EnemyBase.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Enemy\EnemyLockPoint.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Enemy\FarEnemy\EnemyGun.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Enemy\FarEnemy\FarEnemy.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Enemy\FarEnemy\GunHitCheck.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Enemy\MentalMap.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\FilterBloom.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\FilterGodRay.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\FilterInkWash.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\FilterLensFlare.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\FilterVolumetricFog.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Gbuffer.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\LightDirectional.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\LightEnvironment.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\LightManager.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\LightPoint.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Manager\EnemyActionManager.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Manager\EnemyMentalManager.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Manager\SceneGameManager.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Manager\SceneTitleManager.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Manager\SpawnManager.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Player\Camera.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Player\CameraAimPoint.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Player\GameUI.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Player\Player.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Player\UltimateAttackCollision.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\RetryUI.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\SSAO.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\ScanWave.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Shadowmap.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\SkyDome\BlueSkyDome.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\SkyDome\BossSkyDome.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Spawner.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Stage.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\StageTrigger.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Sun.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\TestStage.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Tool\AddData.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Tool\MentalMapBuilder.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Tool\MentalPosBall.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Truck.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Weapon\AttachWeapon\AttachWeaponBase.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Weapon\AttachWeapon\Barrel.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Weapon\AttachWeapon\BarrelWet.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Weapon\AttachWeapon\Box.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Weapon\AttachWeapon\TrafficCone.cpp" />
+    <ClCompile Include="..\..\src\Game\Object\Weapon\Stick.cpp" />
+    <ClCompile Include="..\..\src\Game\Pause.cpp" />
+    <ClCompile Include="..\..\src\Game\Scene\SceneBoss.cpp" />
+    <ClCompile Include="..\..\src\Game\Scene\SceneCutScene.cpp" />
+    <ClCompile Include="..\..\src\Game\Scene\SceneGame.cpp" />
+    <ClCompile Include="..\..\src\Game\Scene\SceneMentalMap.cpp" />
+    <ClCompile Include="..\..\src\Game\Scene\SceneRetry.cpp" />
+    <ClCompile Include="..\..\src\Game\Scene\SceneTest.cpp" />
+    <ClCompile Include="..\..\src\Game\Scene\SceneTitle.cpp" />
+    <ClCompile Include="..\..\src\Game\Scene\SceneTutorial.cpp" />
+    <ClCompile Include="..\..\src\Game\Scene\SceneVictoryCutScene.cpp" />
+    <ClCompile Include="..\..\src\Precompile.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\System\Component\Component.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentAttachModel.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentCamera.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentCollision.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentCollisionBox.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentCollisionCapsule.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentCollisionLine.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentCollisionModel.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentCollisionSphere.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentEffect.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentFilterFade.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentModel.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentObjectController.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentPhysics.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentSequencer.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentSpringArm.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentTargetTracking.cpp" />
+    <ClCompile Include="..\..\src\System\Component\ComponentTransform.cpp" />
+    <ClCompile Include="..\..\src\System\Debug\DebugCamera.cpp" />
+    <ClCompile Include="..\..\src\System\EaseCurve.cpp" />
+    <ClCompile Include="..\..\src\System\FileWatcher.cpp" />
+    <ClCompile Include="..\..\src\System\Geometry.cpp" />
+    <ClCompile Include="..\..\src\System\Graphics\Animation.cpp" />
+    <ClCompile Include="..\..\src\System\Graphics\ConstantBuffer.cpp" />
+    <ClCompile Include="..\..\src\System\Graphics\Frustum.cpp" />
+    <ClCompile Include="..\..\src\System\Graphics\Model.cpp" />
+    <ClCompile Include="..\..\src\System\Graphics\ModelCache.cpp" />
+    <ClCompile Include="..\..\src\System\Graphics\Render.cpp" />
+    <ClCompile Include="..\..\src\System\Graphics\ResourceModel.cpp" />
+    <ClCompile Include="..\..\src\System\Graphics\Shader.cpp" />
+    <ClCompile Include="..\..\src\System\Graphics\Texture.cpp" />
+    <ClCompile Include="..\..\src\System\GuiMenu.cpp" />
+    <ClCompile Include="..\..\src\System\ImGui.cpp" />
+    <ClCompile Include="..\..\src\System\Input\InputKey.cpp" />
+    <ClCompile Include="..\..\src\System\Input\InputMouse.cpp" />
+    <ClCompile Include="..\..\src\System\Input\InputPad.cpp" />
+    <ClCompile Include="..\..\src\System\JobScheduler.cpp" />
+    <ClCompile Include="..\..\src\System\Lib.cpp" />
+    <ClCompile Include="..\..\src\System\LightManager.cpp">
+      <ObjectFileName>$(IntDir)\LightManager1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\System\Object.cpp" />
+    <ClCompile Include="..\..\src\System\Physics\PhysicsCharacter.cpp" />
+    <ClCompile Include="..\..\src\System\Physics\PhysicsEngine.cpp" />
+    <ClCompile Include="..\..\src\System\Physics\PhysicsLayer.cpp" />
+    <ClCompile Include="..\..\src\System\Physics\RigidBody.cpp" />
+    <ClCompile Include="..\..\src\System\Physics\Shape.cpp" />
+    <ClCompile Include="..\..\src\System\ProcTiming.cpp" />
+    <ClCompile Include="..\..\src\System\Scene.cpp" />
+    <ClCompile Include="..\..\src\System\SystemMain.cpp" />
+    <ClCompile Include="..\..\src\System\TypeInfo.cpp" />
+    <ClCompile Include="..\..\src\System\Utils\HelperLib.cpp" />
+    <ClCompile Include="..\..\src\System\Utils\IniFileLib.cpp" />
+    <ClCompile Include="..\..\src\System\VectorMath.cpp" />
+    <ClCompile Include="..\..\src\WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\data\Game.ini" />
+    <None Include="..\..\data\Game\PlayerData\PlayerData.ini" />
+    <None Include="..\..\data\Shader\camera.h.fx" />
+    <None Include="..\..\data\Shader\dxlib_ps.h.fx" />
+    <None Include="..\..\data\Shader\gbuffer.h.fx" />
+    <None Include="..\..\data\Shader\gs_model_composite_prev_position.fx" />
+    <None Include="..\..\data\Shader\gs_model_streamout_position.fx" />
+    <None Include="..\..\data\Shader\lighting.h.fx" />
+    <None Include="..\..\data\Shader\ps_3d_texture.fx" />
+    <None Include="..\..\data\Shader\ps_bloom.fx" />
+    <None Include="..\..\data\Shader\ps_chromatic_aberration.fx" />
+    <None Include="..\..\data\Shader\ps_decal.fx" />
+    <None Include="..\..\data\Shader\ps_dissolve.fx" />
+    <None Include="..\..\data\Shader\ps_filter_fade.fx" />
+    <None Include="..\..\data\Shader\ps_filter_ink_wash.fx" />
+    <None Include="..\..\data\Shader\ps_gaussian.fx" />
+    <None Include="..\..\data\Shader\ps_god_ray.fx" />
+    <None Include="..\..\data\Shader\ps_ink_wash_color.fx" />
+    <None Include="..\..\data\Shader\ps_lens_flare.fx" />
+    <None Include="..\..\data\Shader\ps_light_directional.fx" />
+    <None Include="..\..\data\Shader\ps_light_finish.fx" />
+    <None Include="..\..\data\Shader\ps_light_ibl.fx" />
+    <None Include="..\..\data\Shader\ps_light_point.fx" />
+    <None Include="..\..\data\Shader\ps_line_transition.fx" />
+    <None Include="..\..\data\Shader\ps_model.fx" />
+    <None Include="..\..\data\Shader\ps_model_gbuffer.fx" />
+    <None Include="..\..\data\Shader\ps_model_velocity.fx" />
+    <None Include="..\..\data\Shader\ps_neutral_density.fx" />
+    <None Include="..\..\data\Shader\ps_outline.fx" />
+    <None Include="..\..\data\Shader\ps_scan_composite.fx" />
+    <None Include="..\..\data\Shader\ps_scan_wave.fx" />
+    <None Include="..\..\data\Shader\ps_slash.fx" />
+    <None Include="..\..\data\Shader\ps_sphericalmask_inner.fx" />
+    <None Include="..\..\data\Shader\ps_sphericalmask_outer.fx" />
+    <None Include="..\..\data\Shader\ps_ssao.fx" />
+    <None Include="..\..\data\Shader\ps_texture.fx" />
+    <None Include="..\..\data\Shader\ps_tonemapping.fx" />
+    <None Include="..\..\data\Shader\ps_volumetric_fog.fx" />
+    <None Include="..\..\data\Shader\shadow.h.fx" />
+    <None Include="..\..\data\Shader\vs_3d.fx" />
+    <None Include="..\..\data\Shader\vs_model.fx" />
+    <None Include="..\..\data\Shader\vs_outline.fx" />
+    <None Include="..\..\icon\EmbedStr1ke.aps" />
+    <None Include="..\..\icon\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\icon\EmbedStr1ke.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\icon\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ImGui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ImGuizmo\ImGuizmo.vcxproj">
+      <Project>{36FD234F-22CA-7E5A-4BE3-6C02370FB4E8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\implot\implot.vcxproj">
+      <Project>{5A62C004-4604-EBDA-2FBF-FE2E1B00722B}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\im-neo-sequencer\im-neo-sequencer.vcxproj">
+      <Project>{A2BDD53F-8EB6-F491-B7E8-D916A340D49D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\JoltPhysics\JoltPhysics.vcxproj">
+      <Project>{812AB974-EDDF-316A-76D4-2B41E288286E}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\meshoptimizer\meshoptimizer.vcxproj">
+      <Project>{75046AD2-E1C4-E508-AAFF-2E86167F2AE5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\RecastNavigation\RecastNavigation.vcxproj">
+      <Project>{B704E848-A3FD-069B-CC2F-EC1FB887E6A6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

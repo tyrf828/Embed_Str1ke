@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="opensource">
+      <UniqueIdentifier>{684F8F4A-5407-D197-BD0E-AAF3A9E56B88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opensource\onnxruntime">
+      <UniqueIdentifier>{7EABBBE4-6AA5-E436-5312-7B473FAB4AA3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{EF12EB51-5BD5-1EDC-A485-AD681087F7B9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ライブラリ">
+      <UniqueIdentifier>{58BADFD4-C445-4D99-CD56-D08D3961A999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ライブラリ\Debug">
+      <UniqueIdentifier>{CE26F278-3A93-AD73-0387-45D16FB2CFDB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ライブラリ\Release">
+      <UniqueIdentifier>{888972B4-F4C0-BA4B-FDCA-1E6F6981E144}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\cpu_provider_factory.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_c_api.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_cxx_api.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_cxx_inline.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_env_config_keys.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_ep_c_api.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_ep_device_ep_metadata_keys.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_error_code.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_experimental_c_api.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_experimental_cxx_api.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_float16.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_lite_custom_op.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_run_options_config_keys.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_session_options_config_keys.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_training_c_api.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_training_cxx_api.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\onnxruntime_training_cxx_inline.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opensource\onnxruntime\include\provider_options.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\opensource\onnxruntime\LICENSE">
+      <Filter>opensource\onnxruntime</Filter>
+    </None>
+    <None Include="..\..\opensource\onnxruntime\ThirdPartyNotices.txt">
+      <Filter>opensource\onnxruntime</Filter>
+    </None>
+    <None Include="..\..\opensource\onnxruntime\VERSION_NUMBER">
+      <Filter>opensource\onnxruntime</Filter>
+    </None>
+    <None Include="..\..\opensource\onnxruntime\lib\static\Debug\onnxruntime.lib">
+      <Filter>ライブラリ\Debug</Filter>
+    </None>
+    <None Include="..\..\opensource\onnxruntime\lib\static\Release\onnxruntime.lib">
+      <Filter>ライブラリ\Release</Filter>
+    </None>
+  </ItemGroup>
+</Project>
